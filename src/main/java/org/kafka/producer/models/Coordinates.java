@@ -1,4 +1,4 @@
-package org.kafka.producer;
+package org.kafka.producer.models;
 
 public class Coordinates {
     private String city;
@@ -34,18 +34,16 @@ public class Coordinates {
         return latitude;
     }
 
-    public Coordinates setLatitude(double latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
-        return this;
     }
 
     public double getLongitude() {
         return longitude;
     }
 
-    public Coordinates setLongitude(double longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
-        return this;
     }
 
     public String getPopulation() {

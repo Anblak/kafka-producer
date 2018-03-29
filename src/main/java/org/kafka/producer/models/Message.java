@@ -1,4 +1,4 @@
-package org.kafka.producer;
+package org.kafka.producer.models;
 
 import java.time.LocalDateTime;
 
@@ -12,14 +12,6 @@ public class Message {
     private String fileSize;
     private Coordinates coordinates;
     private String browser;
-
-
-    public Message(int id, String ownersIP, LocalDateTime sentTime, String uuid) {
-        this.id = id;
-        this.ownersIP = ownersIP;
-        this.sentTime = sentTime;
-        this.uuid = uuid;
-    }
 
     public Message(int id, String ownersIP, LocalDateTime sentTime, String uuid, String requestURL, String responseCode,
                    String fileSize, Coordinates coordinates, String browser) {
