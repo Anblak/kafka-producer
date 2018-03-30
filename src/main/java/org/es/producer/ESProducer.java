@@ -65,9 +65,10 @@ public class ESProducer {
 //            client.index(indexRequest).actionGet();
             indexRequestBuilder.setSource(messageGenerator.createJSONMessage(i), XContentType.JSON);
             bulkRequestBuilder.add(indexRequestBuilder);
-            LOGGER.error(bulkRequestBuilder.execute().actionGet().buildFailureMessage());
+
             if (i % 1000 == 0) {
                 LOGGER.info("Messages were sent - " + i);
+                LOGGER.error(bulkRequestBuilder.execute().actionGet().buildFailureMessage());
             }
         }
     }
