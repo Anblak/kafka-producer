@@ -1,4 +1,4 @@
-package org.kafka.producer.models;
+package org.message.generator.models;
 
 public class Coordinates {
     private String city;

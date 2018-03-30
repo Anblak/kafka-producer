@@ -13,7 +13,7 @@ repositories {
 ext {
     spring_version = '4.3.8.RELEASE'
     kafka_version = '1.0.1'
-    elasticsearch_version = '5.5.0'
+    elasticsearch_version = '5.6.0'
 }
 
 
@@ -32,4 +32,9 @@ dependencies {
     compile group: 'org.springframework', name: 'spring-context', version: spring_version
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.4'
+    // https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch
+    compile group: 'org.elasticsearch', name: 'elasticsearch', version: elasticsearch_version
+    // https://mvnrepository.com/artifact/org.elasticsearch.client/transport
+    compile group: 'org.elasticsearch.client', name: 'transport', version: elasticsearch_version
+
 }

@@ -1,4 +1,4 @@
-package org.kafka.producer.models;
+package org.message.generator.models;
 
 import java.time.LocalDateTime;
 
@@ -9,12 +9,12 @@ public class Message {
     private String uuid;
     private String requestURL;
     private String responseCode;
-    private String fileSize;
+    private int fileSize;
     private Coordinates coordinates;
     private String browser;
 
     public Message(int id, String ownersIP, LocalDateTime sentTime, String uuid, String requestURL, String responseCode,
-                   String fileSize, Coordinates coordinates, String browser) {
+                   int fileSize, Coordinates coordinates, String browser) {
         this.id = id;
         this.ownersIP = ownersIP;
         this.sentTime = sentTime;
@@ -74,11 +74,11 @@ public class Message {
         this.responseCode = responseCode;
     }
 
-    public String getFileSize() {
+    public int getFileSize() {
         return fileSize;
     }
 
-    public void setFileSize(String fileSize) {
+    public void setFileSize(int fileSize) {
         this.fileSize = fileSize;
     }
 
