@@ -39,10 +39,10 @@ public class Producer {
             producer = new KafkaProducer<>(properties);
         }
         LOGGER.info("Starting sending messages ...");
-
         try {
             for (int i = 0; i < messageSendingNumber; i++) {
-                producer.send(new ProducerRecord<>(topicName, messageGenerator.createJSONMessage(i)));
+                //TODO companyID
+                producer.send(new ProducerRecord<>(topicName, messageGenerator.createJSONMessage(i , 1231)));
 
                 if (i % 1000 == 0) {
                     LOGGER.info("Sent msg number " + i);

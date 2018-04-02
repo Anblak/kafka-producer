@@ -1,6 +1,6 @@
-package org.message.generator.models;
+package org.message.generator.models.JSON;
 
-public class Coordinates {
+public class CoordinatesFromJSON {
     private String city;
     private String growth_from_2000_to_2013;
     private double latitude;
@@ -9,14 +9,14 @@ public class Coordinates {
     private String rank;
     private String state;
 
-    public Coordinates() {
+    public CoordinatesFromJSON() {
     }
 
     public String getCity() {
         return city;
     }
 
-    public Coordinates setCity(String city) {
+    public CoordinatesFromJSON setCity(String city) {
         this.city = city;
         return this;
     }
@@ -25,7 +25,7 @@ public class Coordinates {
         return growth_from_2000_to_2013;
     }
 
-    public Coordinates setGrowth_from_2000_to_2013(String growth_from_2000_to_2013) {
+    public CoordinatesFromJSON setGrowth_from_2000_to_2013(String growth_from_2000_to_2013) {
         this.growth_from_2000_to_2013 = growth_from_2000_to_2013;
         return this;
     }
@@ -50,7 +50,7 @@ public class Coordinates {
         return population;
     }
 
-    public Coordinates setPopulation(String population) {
+    public CoordinatesFromJSON setPopulation(String population) {
         this.population = population;
         return this;
     }
@@ -59,7 +59,7 @@ public class Coordinates {
         return rank;
     }
 
-    public Coordinates setRank(String rank) {
+    public CoordinatesFromJSON setRank(String rank) {
         this.rank = rank;
         return this;
     }
@@ -68,7 +68,7 @@ public class Coordinates {
         return state;
     }
 
-    public Coordinates setState(String state) {
+    public CoordinatesFromJSON setState(String state) {
         this.state = state;
         return this;
     }

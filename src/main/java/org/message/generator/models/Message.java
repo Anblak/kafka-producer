@@ -1,28 +1,28 @@
 package org.message.generator.models;
 
-import java.time.LocalDateTime;
-
 public class Message {
     private int id;
-    private String ownersIP;
-    private LocalDateTime sentTime;
+    private String clientIP;
+    private int companyId;
+    private String sentTime;
     private String uuid;
     private String requestURL;
     private String responseCode;
     private int fileSize;
-    private Coordinates coordinates;
+    private ClientLocation client_location;
     private String browser;
 
-    public Message(int id, String ownersIP, LocalDateTime sentTime, String uuid, String requestURL, String responseCode,
-                   int fileSize, Coordinates coordinates, String browser) {
+    public Message(int id, String clientIP, int companyId, String sentTime, String uuid, String requestURL,
+                   String responseCode, int fileSize, ClientLocation coordinates, String browser) {
         this.id = id;
-        this.ownersIP = ownersIP;
+        this.clientIP = clientIP;
+        this.companyId = companyId;
         this.sentTime = sentTime;
         this.uuid = uuid;
         this.requestURL = requestURL;
         this.responseCode = responseCode;
         this.fileSize = fileSize;
-        this.coordinates = coordinates;
+        this.client_location = coordinates;
         this.browser = browser;
     }
 
@@ -30,71 +30,89 @@ public class Message {
         return id;
     }
 
-    public void setId(int id) {
+    public Message setId(int id) {
         this.id = id;
+        return this;
     }
 
-    public String getOwnersIP() {
-        return ownersIP;
+    public String getClientIP() {
+        return clientIP;
     }
 
-    public void setOwnersIP(String ownersIP) {
-        this.ownersIP = ownersIP;
+    public Message setClientIP(String clientIP) {
+        this.clientIP = clientIP;
+        return this;
     }
 
-    public LocalDateTime getSentTime() {
+    public int getCompanyId() {
+        return companyId;
+    }
+
+    public Message setCompanyId(int companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+
+    public String getSentTime() {
         return sentTime;
     }
 
-    public void setSentTime(LocalDateTime sentTime) {
+    public Message setSentTime(String sentTime) {
         this.sentTime = sentTime;
+        return this;
     }
 
     public String getUuid() {
         return uuid;
     }
 
-    public void setUuid(String uuid) {
+    public Message setUuid(String uuid) {
         this.uuid = uuid;
+        return this;
     }
 
     public String getRequestURL() {
         return requestURL;
     }
 
-    public void setRequestURL(String requestURL) {
+    public Message setRequestURL(String requestURL) {
         this.requestURL = requestURL;
+        return this;
     }
 
     public String getResponseCode() {
         return responseCode;
     }
 
-    public void setResponseCode(String responseCode) {
+    public Message setResponseCode(String responseCode) {
         this.responseCode = responseCode;
+        return this;
     }
 
     public int getFileSize() {
         return fileSize;
     }
 
-    public void setFileSize(int fileSize) {
+    public Message setFileSize(int fileSize) {
         this.fileSize = fileSize;
+        return this;
     }
 
-    public Coordinates getCoordinates() {
-        return coordinates;
+    public ClientLocation getClient_location() {
+        return client_location;
     }
 
-    public void setCoordinates(Coordinates coordinates) {
-        this.coordinates = coordinates;
+    public Message setClient_location(ClientLocation client_location) {
+        this.client_location = client_location;
+        return this;
     }
 
     public String getBrowser() {
         return browser;
     }
 
-    public void setBrowser(String browser) {
+    public Message setBrowser(String browser) {
         this.browser = browser;
+        return this;
     }
 }
