@@ -7,3 +7,4 @@ linger.ms=31000
 key.serializer=org.apache.kafka.common.serialization.StringSerializer
 value.serializer=org.apache.kafka.common.serialization.StringSerializer
 block.on.buffer.full=true
+group.id=kafka-elasticsearch-consumer

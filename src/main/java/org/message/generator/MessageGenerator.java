@@ -35,15 +35,14 @@ public class MessageGenerator {
         CoordinatesFromJSON tempCoordinatesFromJSON = coordinates.get(rand.nextInt(coordinates.size()));
         double lat = tempCoordinatesFromJSON.getLatitude();
         double lon = tempCoordinatesFromJSON.getLongitude();
-        double[] location = new double[2];
-
-        if (index % 2 == 0) {
-            location[0] = lon + ((double) (int) (rand.nextDouble() * 1000000.0)) / 1000000.0;
-            location[1] = lat + ((double) (int) (rand.nextDouble() * 1000000.0)) / 1000000.0;
-        } else {
-            location[0] = lon - ((double) (int) (rand.nextDouble() * 1000000.0)) / 1000000.0;
-            location[1] = lat - ((double) (int) (rand.nextDouble() * 1000000.0)) / 1000000.0;
-        }
+        double[] location = {lon, lat};
+//        if (index % 2 == 0) {
+//            location[0] = lon + ((double) (int) (rand.nextDouble() * 1000000.0)) / 1000000.0;
+//            location[1] = lat + ((double) (int) (rand.nextDouble() * 1000000.0)) / 1000000.0;
+//        } else {
+//            location[0] = lon - ((double) (int) (rand.nextDouble() * 1000000.0)) / 1000000.0;
+//            location[1] = lat - ((double) (int) (rand.nextDouble() * 1000000.0)) / 1000000.0;
+//        }
         ClientLocation clientLocation = new ClientLocation(location, tempCoordinatesFromJSON.getCity(),
                 tempCoordinatesFromJSON.getState(),tempCoordinatesFromJSON.getPopulation());
         return objectMapper.writeValueAsString(new Message(
