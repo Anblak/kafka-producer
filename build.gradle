@@ -2,6 +2,8 @@ group 'nazarko-softserve'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin:'application'
+mainClassName = "org.kafka.producer.KafkaProducerRunner"
 
 sourceCompatibility = 1.8
 
